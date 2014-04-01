@@ -1,6 +1,9 @@
 ;;; My custom emacs entry
 ;;;
 
+;;; Disable cursor blink
+(blink-cursor-mode 0)
+
 ;; Show line number
 (global-linum-mode t)
 (setq linum-format "%3d ")
