@@ -5,6 +5,8 @@
 (global-linum-mode t)
 (setq linum-format "%3d ")
 
+(require-package 'window-numbering)
+
 ;; Set monospaced fonts for english and chinese
 (when (display-graphic-p)
   (setq fonts
