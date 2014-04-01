@@ -2,7 +2,7 @@
 ;;;
 
 ;;; Disable cursor blink
-(blink-cursor-mode 0)
+;; (blink-cursor-mode 0)
 
 ;; Show line number
 (global-linum-mode t)
@@ -48,6 +48,22 @@
 ;;;
 
 (window-numbering-mode 1)
+
+;; 如果子任务没有全部完成，主任务将不能设置为 DONE 状态
+(setq org-enforce-todo-dependencies t)
+
+;; 优先级范围和默认任务的优先级
+(setq org-highest-priority ?A)
+(setq org-lowest-priority  ?E)
+(setq org-default-priority ?E)
+;; 优先级醒目外观
+(setq org-priority-faces
+  '((?A . (:background "red" :foreground "white" :weight bold))
+    (?B . (:background "DarkOrange" :foreground "white" :weight bold))
+    (?C . (:background "yellow" :foreground "DarkGreen" :weight bold))
+    (?D . (:background "DodgerBlue" :foreground "black" :weight bold))
+    (?E . (:background "SkyBlue" :foreground "black" :weight bold))
+))
 
 (provide 'init-local)
 ;;;
